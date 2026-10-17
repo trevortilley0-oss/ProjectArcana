@@ -4,7 +4,7 @@
 
 The user reports that Phase 0 was successful on the Windows PC. Accept that report as the local setup and movement result. Begin Phase 1 with [one imported spell definition](PHASE_1_01_SPELL_DATA.md), then a tiny one-spell combat test before adding the full deck, UI, or remaining spells.
 
-The connected checkout and GitHub `main` still contain only the prepared setup files at the latest inspection. The Windows `.uproject`, Config, and binary assets have not appeared there. Local gameplay success and source upload are separate: finish synchronizing the project without asking the user to repeat the completed movement exercise.
+The connected checkout and GitHub `main` still contain only the prepared setup files at the latest inspection. The user supplied Windows Git status showing Config, the saved map, template assets, and ProjectArcana.uproject staged (`A`) on `main...origin/main`, with no ahead commit shown. The files have been added to Git but not yet committed/uploaded. One unfamiliar untracked filename is also present; leave it unstaged and do not delete it without inspection. Local gameplay success and source upload are separate: finish the commit/push without repeating the movement exercise.
 
 The development direction is practical: Unreal Engine 5 with Blueprints can support the requested offline Windows prototype. The reported CPU, RAM, discrete GPU, and available SSD space are well suited to this scope. Unreal Engine **5.5.4** is installed and selected. The Windows editor result is user-reported; this cloud environment has no Unreal Editor or access to that Windows machine.
 
@@ -40,7 +40,7 @@ Phase 0 local gameplay setup is accepted as passed from the user's report. Sourc
 
 Create `ST_SpellDefinition`, import `SourceData/Spells/DT_Spells.csv` as `DT_Spells`, and verify the Comet Pin row using [the exact editor steps](PHASE_1_01_SPELL_DATA.md). This is a data checkpoint, not a working spell or battle.
 
-In parallel, inspect `git status --short --branch` on the Windows checkout to diagnose the missing project upload. Do not overwrite or reset local project files. Once the data import is verified, the next gameplay task is a Blueprint combat controller that spends 1 spark and applies 30 damage, rejecting an unaffordable second cast without changing state.
+In parallel, finish the Windows upload: verify LFS is active for staged assets, commit the already-staged project files, then push main. Do not rerun `git add .` while the unfamiliar untracked file is unresolved. Do not overwrite or reset local project files. Once the data import is verified, the next gameplay task is a Blueprint combat controller that spends 1 spark and applies 30 damage, rejecting an unaffordable second cast without changing state.
 
 ## Ordered backlog
 
@@ -60,7 +60,7 @@ The eventual **First Duel** milestone combines the combat and courtyard loop. It
 
 Confirmed: Windows PC; $0; offline single player first; Unreal Engine 5; Blueprints first; stylized original fantasy; card-based turn combat; local saves; no current server. See [ARCHITECTURE.md](ARCHITECTURE.md) for boundaries and provisional spell examples. Do not ask to reconfirm these decisions during routine setup.
 
-Still needed: Windows Git status to diagnose the missing source upload, then actual Phase 1 import and gameplay results. Hardware, storage, engine information, and the Phase 0 success report have been supplied; do not ask for them again. Use 5.5.4 and do not switch engines or add paid tools.
+Still needed: successful Windows commit/push and actual Phase 1 import/gameplay results. The Windows status, hardware, storage, engine information, and Phase 0 success report have been supplied; do not ask for them again. Use 5.5.4 and do not switch engines or add paid tools.
 
 ## Verification record
 
