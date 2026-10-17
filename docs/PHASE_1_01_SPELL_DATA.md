@@ -8,7 +8,7 @@ This task creates real spell data in the editor. It does not yet cast a spell, d
 
 The prepared source file is `SourceData/Spells/DT_Spells.csv` in this repository. Keep it outside `Content`: the editor must have the row structure before importing it.
 
-When this update is shared on GitHub, use the Raw download button on that file's GitHub page to save the actual CSV, or update the Windows checkout after preserving local changes. Do not overwrite the Windows project or reset it to obtain the CSV. If GitHub still lacks the Windows `.uproject` and assets, investigate the local Git status separately; that does not invalidate the completed local movement test.
+Use the Raw download button on that file's GitHub page to save the actual CSV, or update the Windows checkout after preserving local changes. Do not overwrite the Windows project or reset it to obtain the CSV. The user has now reported this import checkpoint complete; these instructions remain a reference rather than a request to repeat it.
 
 ## 2. Create the spell structure
 
@@ -62,4 +62,4 @@ Expected real editor assets: `Content/Arcana/Data/ST_SpellDefinition.uasset` and
 
 Record the import and reopen check in `docs/STATUS.md` after they pass. Keep the CSV source and the two real `.uasset` files in source control, with Git LFS active for the binary assets. Do not claim spell execution based on a successful import.
 
-Next gameplay task: create a Blueprint combat controller that reads this row and supports a valid cast and a rejected cast. Starting from enemy health 100 and player resources 1, a successful cast must produce health 70 and resources 0. A second cast with no resources must leave all state unchanged. Add Pass, explicit phases, and a simple enemy turn after that core transaction is correct, then expand to the full six-spell duel.
+Next gameplay task: follow [the first-cast Blueprint guide](PHASE_1_02_FIRST_CAST.md) to create a controller that reads this row and supports a valid cast and a rejected cast. Starting from enemy health 100 and player resources 1, a successful cast must produce health 70 and resources 0. A second cast with no resources must leave all state unchanged. Add Pass, explicit phases, and a simple enemy turn after that core transaction is correct, then expand to the full six-spell duel.

@@ -1,10 +1,10 @@
 # Project Arcana: development boundaries
 
-This is a design note for implementation. The user reports Phase 0 succeeded in the local Windows Unreal project. The shared checkout does not yet contain that project's binary assets. Combat and spells are not implemented. Begin Phase 1 with the spell-data checkpoint, then a small tested combat controller.
+This is a design note for implementation. The user reports Phase 0 and the first spell-data import succeeded in the local Windows Unreal project. The Third Person project has been shared on GitHub; the newly imported spell-data assets are still local. Combat and spell execution are not implemented. The next step is the small combat controller in `docs/PHASE_1_02_FIRST_CAST.md`.
 
 ## Confirmed decisions
 
-- Unreal Engine **5.5.4**, already installed on the reported Windows development PC. Do not upgrade during Phase 0. Hardware specifications are recorded in `STATUS.md`; actual editor performance remains unverified.
+- Unreal Engine **5.5.4**, already installed on the reported Windows development PC. Keep this version unless an upgrade is separately planned. Hardware specifications are recorded in `STATUS.md`; measured editor performance remains unverified.
 - Blueprints first. Add C++ only when a concrete architecture, testing, or networking need justifies it.
 - Windows PC, single player, playable offline, and a $0 starting budget.
 - Original stylized fantasy content. Publicly documented game mechanics can inform design; proprietary assets and source code cannot be reused.
