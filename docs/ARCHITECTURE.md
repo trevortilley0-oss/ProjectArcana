@@ -1,6 +1,6 @@
 # Project Arcana: development boundaries
 
-This is a design note for later implementation. No Unreal project, Blueprint, combat system, or working spell has been created yet. Phase 0 ends with a verified Third Person template character; implement combat in Phase 1.
+This is a design note for implementation. The user reports Phase 0 succeeded in the local Windows Unreal project. The shared checkout does not yet contain that project's binary assets. Combat and spells are not implemented. Begin Phase 1 with the spell-data checkpoint, then a small tested combat controller.
 
 ## Confirmed decisions
 
@@ -43,7 +43,7 @@ Keep state transitions independent of animation duration. The presentation can w
 
 ### Data-driven spell definitions
 
-Choose an Unreal-supported Data Asset or Data Table after confirming the engine version. Store a unique ID, display name, discipline, resource cost, success rules, target type, damage/healing values, effect types and durations, modifiers, upgrade/unlock/rarity data, presentation asset references, and AI evaluation values. Separate reusable effect definitions from each spell's parameters. Keep mutable health, remaining durations, and draw order in battle state.
+For the first checkpoint in UE 5.5.4, use a Blueprint Structure and Data Table with only ID, display name, resource cost, direct damage, and accuracy. The importable source is `SourceData/Spells/DT_Spells.csv`. This is a deliberately small initial schema, not the complete spell system. Extend the data model with discipline, success rules, target type, healing, reusable effects and durations, modifiers, upgrade/unlock/rarity data, presentation references, and AI evaluation values as their rules are implemented. Keep mutable health, remaining durations, and draw order in battle state.
 
 ## Six example spell functions — not implemented
 
