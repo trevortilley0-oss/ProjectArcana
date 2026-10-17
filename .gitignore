@@ -1,0 +1,29 @@
+# Generated Unreal files. Keep authored Config, Content, Source, Plugins, and Build.
+/Binaries/
+/DerivedDataCache/
+/Intermediate/
+/Saved/
+/Plugins/**/Binaries/
+/Plugins/**/Intermediate/
+/Plugins/**/Saved/
+
+# Generated IDE files.
+/.vs/
+/.idea/
+*.sln
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.code-workspace
+
+# Local credentials and machine-specific configuration.
+.env
+.env.*
+!.env.example
+
+# Operating system files.
+.DS_Store
+Thumbs.db
+Desktop.ini
